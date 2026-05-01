@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="aurora"></div>
+    <div class="grid-bg"></div>
+    <div id="cursor-glow"></div>
+    <div id="particles-bg"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">CrowdSolve</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content hero-card">
+                <h1>CrowdSolve – Community Problem Reporting Platform</h1>
+                <p class="subheading">Empowering communities to report and track public infrastructure issues in real time.</p>
+                <div class="cta-buttons">
+                    <a href="report.html" class="hero-btn">Report an Issue &rarr;</a>
+                    <a href="dashboard.html" class="btn btn-secondary">Open Dashboard</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Report Problems</h3>
+                <p>Easily submit detailed reports about local issues with precisely mapped locations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Track Issue Status</h3>
+                <p>Stay updated on the progress of reported issues as they get verified and resolved.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Community Collaboration</h3>
+                <p>Work together to prioritize and solve the most pressing challenges in your area.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How CrowdSolve Works</h2>
+            <p class="section-subtitle">
+                A simple workflow connecting citizens and authorities to solve city problems faster.
+            </p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📍</div>
+                    <h3>Report Issues</h3>
+                    <p>
+                        Citizens submit problems like potholes, water leakage or garbage using location and photos.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">🤖</div>
+                    <h3>AI Categorization</h3>
+                    <p>
+                        Our system automatically detects issue category, severity and assigns the correct department.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">🏛</div>
+                    <h3>Authority Resolution</h3>
+                    <p>
+                        Government authorities track and resolve issues through a real-time dashboard.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script>
+    tsParticles.load("particles-bg", {
+      background: {
+        color: "transparent"
+      },
+      fpsLimit: 60,
+      particles: {
+        number: {
+          value: 90,
+          density: { enable: true, area: 800 }
+        },
+        color: { value: "#5b8cff" },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#8aa8ff",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.2,
+          direction: "none",
+          random: false,
+          straight: false,
+          outModes: { default: "bounce" }
+        },
+        opacity: {
+          value: 0.6
+        },
+        size: {
+          value: { min: 1, max: 3 }
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "attract"
+          },
+          resize: true
+        },
+        modes: {
+          attract: {
+            distance: 200,
+            duration: 0.4,
+            speed: 1
+          }
+        }
+      },
+      detectRetina: true
+    });
+    </script>
+</body>
+</html>

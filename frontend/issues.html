@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Issues - CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="app-layout">
+    <aside class="sidebar">
+        <a href="dashboard.html" class="sidebar-logo">CrowdSolve</a>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="report.html">Report Issue</a></li>
+            <li><a href="issues.html" class="active">Issues</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="authority_login.html">🔒 Authority Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="dashboard-header">
+            <h2>Community Issues</h2>
+            <p class="form-subtitle">Track and view all reported infrastructure issues in your community.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="issue-search" placeholder="Search issues by title, description, or location...">
+        </div>
+
+        <div class="filters">
+            <button data-filter="all">All Issues</button>
+            <button data-filter="Pending">Pending</button>
+            <button data-filter="Resolved">Resolved</button>
+        </div>
+
+        <div id="issues-container" class="issues-grid">
+            <!-- Populated dynamically via JS -->
+        </div>
+
+    </main>
+
+    <!-- Evidence Modal -->
+    <div class="modal-overlay" id="evidenceModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Issue Evidence" class="modal-image" id="modalImage">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

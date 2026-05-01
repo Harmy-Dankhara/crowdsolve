@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Authority Account - CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #f8fafc, #eef2f7);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            width: 420px;
+            border: 1px solid #e6eaf0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .login-logo { font-size: 1.4rem; font-weight: 700; color: #4f46e5; text-align: center; margin-bottom: 6px; letter-spacing: -0.02em; }
+        .login-subtitle { text-align: center; font-size: 14px; color: #6b7280; margin-bottom: 24px; }
+        .login-field { margin-bottom: 4px; }
+        .login-field label { display: block; font-size: 0.85rem; font-weight: 500; color: #334155; margin-bottom: 6px; }
+        .login-field input, .login-field select {
+            width: 100%; padding: 11px 12px; border-radius: 8px; border: 1px solid #d1d5db;
+            margin-top: 4px; margin-bottom: 14px; font-size: 14px; font-family: 'Inter', sans-serif;
+            color: #0f172a; background: #f8fafc; outline: none; box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .login-field input:focus, .login-field select:focus {
+            border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.12); background: white;
+        }
+        .login-btn {
+            width: 100%; padding: 12px; margin-top: 4px;
+            background: linear-gradient(135deg, #2563eb, #4f46e5); color: white; border: none;
+            border-radius: 10px; font-size: 0.95rem; font-weight: 500; cursor: pointer;
+            font-family: 'Inter', sans-serif; transition: all 0.2s ease;
+        }
+        .login-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 16px rgba(37,99,235,0.25); }
+        .login-error {
+            display: none; color: #dc2626; background: #fef2f2; border: 1px solid #fecaca;
+            border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; margin-top: 14px; text-align: center;
+        }
+        .login-success {
+            display: none; color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0;
+            border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; margin-top: 14px; text-align: center;
+        }
+        .back-link { display: block; text-align: center; margin-top: 18px; font-size: 0.85rem; color: #64748b; text-decoration: none; transition: color 0.2s; }
+        .back-link:hover { color: #4f46e5; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-logo">CrowdSolve</div>
+        <p class="login-subtitle">Create Authority Account</p>
+
+        <div class="login-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+        </div>
+        <div class="login-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="login-field">
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="e.g. Road &amp; Infrastructure">
+        </div>
+        <div class="login-field">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="e.g. Ahmedabad">
+        </div>
+        <div class="login-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Choose a strong password">
+        </div>
+
+        <button class="login-btn" id="signupBtn">Create Account →</button>
+
+        <div class="login-error" id="signupError"></div>
+        <div class="login-success" id="signupSuccess"></div>
+
+        <a href="authority_login.html" class="back-link">Already have an account? Sign In</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="app-layout">
+    <aside class="sidebar">
+        <a href="dashboard.html" class="sidebar-logo">CrowdSolve</a>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="report.html">Report Issue</a></li>
+            <li><a href="issues.html">Issues</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li id="authority-login-link"><a href="authority_login.html">🔒 Authority Login</a></li>
+        </ul>
+        <div id="authority-logout-section" style="display:none; margin-top: auto; padding-top: 2rem;">
+            <div style="font-size:0.8rem; color:#94a3b8; padding: 0 0.5rem; margin-bottom:8px;">Logged in as Authority</div>
+            <button id="logoutBtn" style="width:100%; padding:8px 12px; background:rgba(239,68,68,0.15); color:#fca5a5; border:1px solid rgba(239,68,68,0.25); border-radius:8px; cursor:pointer; font-size:0.85rem; font-weight:500; text-align:left;">Sign Out</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="dashboard-header">
+            <h2>Overview</h2>
+            <p class="form-subtitle">At-a-glance summary of community reports.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="total-count">0</h3>
+                <p>Total Issues</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pending-count">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="resolved-count">0</h3>
+                <p>Resolved</p>
+        </div>
+
+        <!-- AI Insights Section -->
+        <div class="ai-insights" style="background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); border: 1px solid #99f6e4; padding: 20px; border-radius: 12px; margin-top: 24px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #0f766e; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 15px; font-size: 1.5rem;">
+                <span style="font-size: 1.2rem;">✨</span> AI Insights
+            </h2>
+            <ul style="list-style: none; padding: 0; margin: 0; color: #115e59; font-weight: 500; display: flex; flex-direction: column; gap: 12px;">
+                <li id="top-category" style="background: rgba(255,255,255,0.5); padding: 10px 15px; border-radius: 8px;">Loading...</li>
+                <li id="top-city" style="background: rgba(255,255,255,0.5); padding: 10px 15px; border-radius: 8px;">Loading...</li>
+                <li id="top-department" style="background: rgba(255,255,255,0.5); padding: 10px 15px; border-radius: 8px;">Loading...</li>
+            </ul>
+        </div>
+
+        <div class="dashboard-recent">
+            <h3 style="margin-bottom: 20px; font-weight: 600;">Recent Issues</h3>
+            <div id="recent-issues-container" class="issues-grid">
+               <!-- Only the latest 3 issues will be injected here by script.js -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Evidence Modal -->
+    <div class="modal-overlay" id="evidenceModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Issue Evidence" class="modal-image" id="modalImage">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

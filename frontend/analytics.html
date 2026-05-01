@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="app-layout">
+    <aside class="sidebar">
+        <a href="dashboard.html" class="sidebar-logo">CrowdSolve</a>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="report.html">Report Issue</a></li>
+            <li><a href="issues.html">Issues</a></li>
+            <li><a href="analytics.html" class="active">Analytics</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="authority_login.html">🔒 Authority Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="dashboard-header">
+            <h2>Analytics & Distribution</h2>
+            <p class="form-subtitle">Deeper insights into issue resolution and status.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="total-count">0</h3>
+                <p>Total Reports</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pending-count">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="resolved-count">0</h3>
+                <p>Resolved</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="issuesChart"></canvas>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

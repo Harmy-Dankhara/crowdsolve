@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Locations Map - CrowdSolve</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body class="app-layout">
+    <aside class="sidebar">
+        <a href="dashboard.html" class="sidebar-logo">CrowdSolve</a>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="report.html">Report Issue</a></li>
+            <li><a href="issues.html">Issues</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="map.html" class="active">Map</a></li>
+            <li><a href="authority_login.html">🔒 Authority Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="dashboard-header">
+            <h2>Issue Locations Map</h2>
+            <p class="form-subtitle">Geographical distribution of all reported issues.</p>
+        </div>
+
+        <div class="map-container" style="width: 100%; max-width: 1000px;">
+            <div id="issuesMap" style="height: 70vh; width: 100%;"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
